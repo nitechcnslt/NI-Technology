@@ -3,149 +3,235 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NI Technology | Mobile AI & Automation Consulting</title>
-  <meta name="description" content="NI Technology helps small and mid-sized businesses implement practical AI and automation. Mobile, on-site consulting, chatbots, CRM workflows, and team training." />
+  <title>NI Technology | AI & Automation Consulting</title>
+  <meta name="description" content="NI Technology helps SMBs implement practical AI and automation — chatbots, CRM workflows, and on‑site training. Local & remote." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='14' width='64' height='64' fill='%230b0f19'/%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23a78bfa' stroke-width='3'/%3E%3Cpath d='M20 22h24v4H20z' fill='%23fff'/%3E%3Cpath d='M24 30h8v4h-8zM32 30h8v4h-8z' fill='%23a78bfa'/%3E%3Cpath d='M30 14h4a2 2 0 0 1 2 2v32a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V16a2 2 0 0 1 2-2z' fill='%2322d3ee'/%3E%3C/svg%3E" />
   <style>
-    :root{--bg:#0b0f19;--card:#111827;--muted:#94a3b8;--text:#e5e7eb;--accent:#a78bfa;--accent2:#22d3ee;}
-    *{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
-    .wrap{max-width:1120px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;background:rgba(11,15,25,.7);backdrop-filter:blur(8px)}
-    .brand{display:flex;align-items:center;gap:10px} .logo{width:40px;height:40px}
-    .btn{display:inline-block;padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.18);font-weight:700;cursor:pointer}
-    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#0b0f19;border-color:transparent}
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:48px 0}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px}
-    h1{font-size:40px;line-height:1.1;margin:0 0 10px} h2{font-size:28px;margin:0 0 8px}
-    .sub{color:var(--muted);margin:0 0 18px} .grid{display:grid;gap:18px}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))} .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .badge{display:inline-block;background:rgba(167,139,250,.18);color:var(--accent);padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700}
-    .list{display:grid;gap:10px;margin:0;padding:0} .list li{list-style:none;display:flex;gap:10px}
-    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:8px;box-shadow:0 0 0 6px rgba(167,139,250,.25)}
-    footer{padding:28px 0;border-top:1px solid rgba(255,255,255,.08);color:#a5b4fc}
-    input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:#0f172a;color:#e5e7eb;outline:none}
-    input:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(167,139,250,.25)}
-    @media (max-width:960px){.hero,.grid-3,.grid-2{grid-template-columns:1fr}}
+    :root{
+      --bg:#050816; --bg2:#0b1022; --glass:rgba(255,255,255,.06);
+      --text:#e5e7eb; --muted:#9aa4b2; --line:rgba(255,255,255,.08);
+      --violet:#a78bfa; --cyan:#22d3ee; --ring:rgba(167,139,250,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:radial-gradient(1200px 600px at 10% -10%,rgba(167,139,250,.15),transparent),radial-gradient(900px 500px at 90% 0,rgba(34,211,238,.12),transparent),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1200px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:40;background:linear-gradient(180deg,rgba(5,8,22,.85),rgba(5,8,22,.55));backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:40px;height:40px}
+    .brand b{letter-spacing:.2px}
+    .nav a{opacity:.9}
+    .nav a:hover{opacity:1}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);font-weight:700;cursor:pointer}
+    .btn.primary{border-color:transparent;background:linear-gradient(90deg,var(--violet),var(--cyan));color:#0b0f19}
+    .btn.ghost{background:transparent}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:56px 0}
+    h1{font-size:44px;line-height:1.05;margin:0 0 12px}
+    h2{font-size:28px;margin:0 0 8px}
+    h3{margin:0 0 8px}
+    .sub{color:var(--muted)}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:linear-gradient(90deg,rgba(167,139,250,.18),rgba(34,211,238,.18));color:#dbeafe;font-size:12px;font-weight:800;letter-spacing:.3px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:16px;padding:20px}
+    .grid{display:grid;gap:20px}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .kpi{display:flex;gap:16px;align-items:center}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;background:var(--glass);border:1px solid var(--line);border-radius:999px}
+    .list{display:grid;gap:10px;margin:0;padding:0}
+    .list li{list-style:none;display:flex;gap:10px;align-items:flex-start}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--violet);margin-top:8px;box-shadow:0 0 0 6px var(--ring)}
+    .icon{width:24px;height:24px;opacity:.9}
+    .feature{transition:transform .25s ease, box-shadow .25s ease}
+    .feature:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .process-step{display:flex;gap:12px;align-items:flex-start}
+    .step-num{width:28px;height:28px;border-radius:8px;background:linear-gradient(90deg,var(--violet),var(--cyan));color:#0b0f19;display:inline-grid;place-items:center;font-weight:800}
+    footer{padding:36px 0;border-top:1px solid var(--line);color:#a5b4fc}
+    input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--text);outline:none}
+    input:focus,textarea:focus{border-color:var(--violet);box-shadow:0 0 0 4px var(--ring)}
+    @media (max-width: 1000px){.hero,.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
   </style>
-  <!-- Local Business schema -->
+  <!-- Schema.org Local Business -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "NI Technology",
-    "description": "Mobile, on-site AI & automation consulting for small and mid-sized businesses.",
-    "email": "tl.tonyle@gmail.com",
-    "telephone": "+1-408-307-9447",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "5035 N Rosemead Blvd #9",
-      "addressLocality": "San Gabriel",
-      "addressRegion": "CA",
-      "postalCode": "91766",
-      "addressCountry": "US"
-    },
-    "areaServed": "Greater Los Angeles",
-    "url": "https://example.com"
+    "@context":"https://schema.org","@type":"ProfessionalService",
+    "name":"NI Technology",
+    "description":"Mobile, on‑site AI & automation consulting for small and mid‑sized businesses.",
+    "email":"nitechcnslt@gmail.com",
+    "telephone":"+1 (408) 307-9447",
+    "url":"https://example.com",
+    "brand":{"@type":"Brand","name":"NI Technology"},
+    "address":{"@type":"PostalAddress","streetAddress":"5035 N Rosemead Blvd #9","addressLocality":"Pomona","addressRegion":"CA","postalCode":"91766","addressCountry":"US"},
+    "areaServed":"Greater Los Angeles",
+    "knowsAbout":["AI chatbots","automation","CRM","marketing automation","workshops"]
   }
   </script>
 </head>
 <body>
-  <header class="wrap">
-    <div class="brand">
-      <!-- Inline SVG logo -->
-      <svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="NI Technology">
-        <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
-        <rect rx="14" width="64" height="64" fill="#0b0f19"/>
-        <circle cx="32" cy="32" r="24" fill="none" stroke="url(#g)" stroke-width="3"/>
-        <path d="M20 22h24v4H20z" fill="#fff"/><path d="M24 30h8v4h-8zM32 30h8v4h-8z" fill="#a78bfa"/>
-        <path d="M30 14h4a2 2 0 0 1 2 2v32a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V16a2 2 0 0 1 2-2z" fill="#22d3ee"/>
-      </svg>
-      <strong>NI Technology</strong>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="NI Technology">
+          <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
+          <rect rx="14" width="64" height="64" fill="#0b0f19"/>
+          <circle cx="32" cy="32" r="24" fill="none" stroke="url(#g)" stroke-width="3"/>
+          <path d="M20 22h24v4H20z" fill="#fff"/>
+          <path d="M24 30h8v4h-8zM32 30h8v4h-8z" fill="#a78bfa"/>
+          <path d="M30 14h4a2 2 0 0 1 2 2v32a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V16a2 2 0 0 1 2-2z" fill="#22d3ee"/>
+        </svg>
+        <b>NI Technology</b>
+      </div>
+      <nav style="display:flex;gap:16px;flex-wrap:wrap">
+        <a href="#services">Services</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact" class="btn primary">Get a Free AI Audit</a>
+      </nav>
     </div>
-    <a href="#contact" class="btn">Contact</a>
   </header>
 
   <main class="wrap">
     <!-- HERO -->
     <section class="hero">
       <div>
-        <span class="badge">Mobile • On-Site • Practical AI</span>
-        <h1>Bring AI to your business—without the hype.</h1>
-        <p class="sub">We design chatbots, automate CRM workflows, and train teams. Typical clients save 5–10 hours/week and see 10–20% more leads in 30 days.</p>
-        <a href="#contact" class="btn primary">Get a Free AI Audit</a>
+        <span class="badge">Mobile • On‑Site • Practical AI</span>
+        <h1>Build lean AI systems that save time and grow revenue.</h1>
+        <p class="sub">We design chatbots, automate CRMs, and train your team. Typical clients save 5–10 hours/week and see 10–20% more leads in the first 30 days.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="#contact" class="btn primary">Book Discovery Call</a>
+          <a href="#services" class="btn ghost">See Services</a>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px">
+          <span class="pill">\u2728 Quick setup (2–4 weeks)</span>
+          <span class="pill">\u23F3 Low‑lift for your team</span>
+          <span class="pill">\u2714\uFE0F Clear ROI tracking</span>
+        </div>
       </div>
       <div class="card">
-        <h3 style="margin:0 0 8px">Quick Wins</h3>
+        <h3 style="margin:0 0 8px">What we implement</h3>
         <ul class="list">
-          <li><span class="dot"></span><span>24/7 chatbots that answer FAQs and book appointments</span></li>
-          <li><span class="dot"></span><span>Lead routing & follow-up automation in your CRM</span></li>
-          <li><span class="dot"></span><span>AI-assisted email/SMS campaigns</span></li>
-          <li><span class="dot"></span><span>On-site workshop so your team can run it</span></li>
+          <li><span class="dot"></span><span>24/7 chatbots that answer FAQs & book appointments</span></li>
+          <li><span class="dot"></span><span>Lead routing & follow‑up automation across CRM</span></li>
+          <li><span class="dot"></span><span>AI‑assisted email/SMS campaigns that convert</span></li>
+          <li><span class="dot"></span><span>On‑site workshops and handoff documentation</span></li>
         </ul>
       </div>
     </section>
 
     <!-- SERVICES -->
-    <section>
+    <section id="services">
       <h2>Services</h2>
-      <p class="sub">Done-for-you builds, monthly support, and on-site training.</p>
+      <p class="sub">Pick a done‑for‑you build, monthly support, or one‑day on‑site training.</p>
       <div class="grid grid-3">
-        <div class="card">
-          <span class="badge">Automation</span>
-          <p><strong>Business Process Automation</strong><br/>CRM integration (HubSpot, Salesforce, Follow Up Boss), Zapier/Make, transcription → CRM.</p>
+        <div class="card feature">
+          <div class="kpi"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v6H4z"/><path d="M4 14h16v6H4z"/><path d="M7 7h6"/></svg><b>Process Automation</b></div>
+          <p class="sub">Scheduling, invoicing, data entry, and hand‑offs automated in your tools.</p>
+          <ul class="list">
+            <li><span class="dot"></span><span>CRM integration (HubSpot, Salesforce, Follow Up Boss)</span></li>
+            <li><span class="dot"></span><span>Zapier/Make workflows & lightweight scripts</span></li>
+            <li><span class="dot"></span><span>Call/meeting transcription into CRM</span></li>
+          </ul>
         </div>
-        <div class="card">
-          <span class="badge">Engagement</span>
-          <p><strong>AI Marketing & Chatbots</strong><br/>Website/WhatsApp/Messenger bots, email/SMS automation, landing pages & A/B tests.</p>
+        <div class="card feature">
+          <div class="kpi"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg><b>AI Marketing & Chatbots</b></div>
+          <p class="sub">Lead capture bots, AI copy, and lifecycle campaigns that convert.</p>
+          <ul class="list">
+            <li><span class="dot"></span><span>Website, WhatsApp, FB Messenger chatbots</span></li>
+            <li><span class="dot"></span><span>Email/SMS automation & segmentation</span></li>
+            <li><span class="dot"></span><span>Landing pages & A/B testing</span></li>
+          </ul>
         </div>
-        <div class="card">
-          <span class="badge">Training</span>
-          <p><strong>On-Site AI Workshops</strong><br/>2–3 hour bootcamps, prompt libraries & SOPs, governance basics.</p>
+        <div class="card feature">
+          <div class="kpi"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20v-8M8 12l4-8 4 8"/></svg><b>On‑Site AI Workshops</b></div>
+          <p class="sub">2–3 hour bootcamps to skill‑up your team fast—tools, prompts, guardrails.</p>
+          <ul class="list">
+            <li><span class="dot"></span><span>Department‑specific playbooks</span></li>
+            <li><span class="dot"></span><span>Prompt libraries & SOP templates</span></li>
+            <li><span class="dot"></span><span>Governance & adoption coaching</span></li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- PACKAGES -->
-    <section>
-      <h2>Packages</h2>
-      <div class="grid grid-3">
-        <div class="card"><strong>Starter</strong><br/><span class="sub">$1,000 / mo</span><br/>1 chatbot + 1 workflow + monthly report.</div>
-        <div class="card" style="outline:2px solid var(--accent);outline-offset:2px"><strong>Growth</strong><br/><span class="sub">$2,000 / mo</span><br/>Starter + 3 automations + quarterly workshop.</div>
-        <div class="card"><strong>Project</strong><br/><span class="sub">$5,000 / project</span><br/>Bot + CRM + campaign in 2–4 weeks (with training).</div>
+    <!-- SOLUTIONS / USE CASES -->
+    <section id="solutions" class="card">
+      <h2>Solutions by team</h2>
+      <div class="grid grid-4">
+        <div>
+          <b>Sales</b>
+          <p class="sub">Faster lead response, auto‑tasks, pipeline hygiene.</p>
+        </div>
+        <div>
+          <b>Marketing</b>
+          <p class="sub">Chatbots, email/SMS, content repurposing.</p>
+        </div>
+        <div>
+          <b>Ops</b>
+          <p class="sub">Ticketing, routing, status updates, dashboards.</p>
+        </div>
+        <div>
+          <b>Service</b>
+          <p class="sub">24/7 FAQs, appointment booking, CS macros.</p>
+        </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="card">
-      <h2>About</h2>
-      <p>NI Technology is a boutique consultancy focused on practical AI. We meet you on-site, map your processes, and implement the smallest system that makes the biggest impact.</p>
-      <p class="sub">Owner: <strong>Vu Le</strong> • Founded 2025 • Local & Remote</p>
+    <!-- PROCESS -->
+    <section class="grid grid-2">
+      <div class="card">
+        <h2>How we work</h2>
+        <div class="process-step"><span class="step-num">1</span><div><b>Discover</b><p class="sub">60‑min audit to map quick wins & constraints.</p></div></div>
+        <div class="process-step"><span class="step-num">2</span><div><b>Design</b><p class="sub">Smallest system that moves the biggest levers.</p></div></div>
+        <div class="process-step"><span class="step-num">3</span><div><b>Build</b><p class="sub">Bots, workflows, and tracking wired to your stack.</p></div></div>
+        <div class="process-step"><span class="step-num">4</span><div><b>Handoff</b><p class="sub">Playbooks, training, and iteration roadmap.</p></div></div>
+      </div>
+      <div class="card">
+        <h2>Stack we integrate</h2>
+        <p class="sub">HubSpot • Salesforce • Follow Up Boss • Google Workspace • Slack • Zapier • Make • Twilio • WhatsApp • Meta • Web widgets</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+          <span class="pill">\uD83D\uDCBB CRM</span>
+          <span class="pill">\u2709\uFE0F Email/SMS</span>
+          <span class="pill">\uD83D\uDCE1 Chat/Voice</span>
+          <span class="pill">\uD83D\uDCCA Analytics</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+      <h2>Pricing</h2>
+      <p class="sub">Clear, simple options that scale with you.</p>
+      <div class="grid grid-3">
+        <div class="card"><b>Starter</b><p class="sub">$1,000 / mo</p><p>1 chatbot • 1 workflow • monthly report</p></div>
+        <div class="card" style="outline:2px solid var(--violet);outline-offset:2px"><b>Growth</b><p class="sub">$2,000 / mo</p><p>Starter + 3 automations • quarterly workshop</p></div>
+        <div class="card"><b>Project</b><p class="sub">$5,000 / project</p><p>Bot + CRM + campaign in 2–4 weeks (with training)</p></div>
+      </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="grid grid-2">
-        <form class="card" action="mailto:tl.tonyle@gmail.com" method="post" enctype="text/plain">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <input type="tel" name="phone" placeholder="Phone (optional)" />
-          <textarea name="message" rows="4" placeholder="What would you like to automate?" required></textarea>
-          <button class="btn primary" type="submit">Send</button>
-          <p class="sub">By submitting, you consent to be contacted about services.</p>
-        </form>
-        <div class="card">
-          <p><strong>Email:</strong> tl.tonyle@gmail.com<br/>
-             <strong>Phone:</strong> (408) 307-9447<br/>
-             <strong>Address:</strong> 5035 N Rosemead Blvd #9, San Gabriel, CA 91766<br/>
-             <strong>Service Area:</strong> Greater Los Angeles
-          </p>
-          <div style="border-radius:12px;overflow:hidden;margin-top:8px">
-            <iframe title="Map" width="100%" height="240" style="border:0"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=5035%20N%20Rosemead%20Blvd%20%239%2C%20San%20Gabriel%2C%20CA%2091766&output=embed"></iframe>
-          </div>
+    <section id="contact" class="grid grid-2">
+      <form class="card" action="mailto:nitechcnslt@gmail.com" method="post" enctype="text/plain">
+        <h2>Book a Free Consult</h2>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Phone (optional)" />
+        <textarea name="message" rows="4" placeholder="What would you like to automate?" required></textarea>
+        <button class="btn primary" type="submit">Send</button>
+        <p class="sub">By submitting, you consent to be contacted about services.</p>
+      </form>
+      <div class="card">
+        <h2>Details</h2>
+        <p><b>Owner:</b> Vu Le<br>
+           <b>Email:</b> nitechcnslt@gmail.com<br>
+           <b>Phone:</b> (408) 307‑9447<br>
+           <b>Address:</b> 5035 N Rosemead Blvd #9, Pomona, CA 91766<br>
+           <b>Service Area:</b> Greater Los Angeles
+        </p>
+        <div style="border-radius:12px;overflow:hidden;margin-top:12px">
+          <iframe title="Map" width="100%" height="240" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=5035%20N%20Rosemead%20Blvd%20%239%2C%20Pomona%2C%20CA%2091766&output=embed"></iframe>
         </div>
+        <p class="sub" style="margin-top:8px">Note: For San Gabriel city, use ZIP 91776; keep city/ZIP aligned for GBP verification.</p>
       </div>
     </section>
   </main>
@@ -156,6 +242,6 @@
       <small><a href="#top">Back to top</a></small>
     </div>
   </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
